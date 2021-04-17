@@ -6,10 +6,16 @@ import { ADD_USER } from "../utils/mutations";
 
 function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
+  const [error, setEror] = useState('');
   const [addUser] = useMutation(ADD_USER);
 
   const handleFormSubmit = async event => {
     event.preventDefault();
+    if(formState.password.length < 5) {
+      console.log('here', formState.password.length)
+      setError('Password length must be larger than 5');
+      return;
+    }
     const mutationResponse = await addUser({
       variables: {
         email: formState.email, password: formState.password,
@@ -37,6 +43,9 @@ function Signup(props) {
       <h2>Signup</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
+          <div className="error">{error}</div>
+          </div>
+          <div className="flex-row space-between my-2">
           <label htmlFor="firstName">First Name:</label>
           <input
             placeholder="First"

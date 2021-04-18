@@ -16,14 +16,12 @@
   An ecommerce website that has its state management controlled by Redux. 
 
   ## Images:
-  ![Project ScreenShot](./imagePathHere.png)
-  ![Project Screenshot](./imagePathHere.png)
-  ![Project Screenshot](./imagePathHere.png)
+  ![image](https://user-images.githubusercontent.com/71112436/115146190-13b32200-a01b-11eb-83e1-54f190d7117c.png)
 
   ## Installation Instructions: 
   Clone the repository to your local machine.
   Run npm i from the root project folder. 
-  To see it deployed visit 
+  To see it deployed visit https://mysterious-falls-02544.herokuapp.com/
 
   ## Test: 
   To test type npm start into the terminal
